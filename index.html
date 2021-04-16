@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CenterLogistic</title>
@@ -15,12 +16,12 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html">
+                <a href="#" data-scroll="#intro">
                     <img class="img" src="assets/images/logo.svg" alt="CenterLogistic">
                 </a>
 
-                <nav class="nav">
-                    <a class="nav__link  active" href="#" data-scroll="#services">Services</a>
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#services">Services</a>
                     <a class="nav__link" href="#" data-scroll="#clients">Clients</a>
                     <a class="nav__link" href="#" data-scroll="#benefits">Benefits</a>
                     <a class="nav__link" href="#" data-scroll="#team">Team</a>
@@ -29,8 +30,11 @@
                     <a class="nav__link" href="#">Contact Us</a>
                 </nav>
 
-                <button class="burger" type="button">
-                    <img class="burger__icon" src="assets/images/burger.svg" alt="">
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__line">1</span>
+                    <span class="burger__line">2</span>
+                    <span class="burger__line">3</span>
+                    <span class="burger__line">4</span>
                 </button>
             </div>
         </div>
@@ -39,6 +43,16 @@
 
     <!-- Intro -->
     <div class="intro" id="intro">
+
+        <div class="intro__slider" id="introSlider">
+            <div class="slider-item">
+                <div class="intro__slider-item" style="background-image: url(assets/images/intro-bg.jpg)"></div>
+            </div>
+            <div class="slider-item">
+                <img class="intro__slider-photo" src="assets/images/intro-bg.jpg" alt="">
+            </div>
+        </div>
+
         <div class="container">
             <div class="intro__inner">
 
@@ -73,6 +87,11 @@
                         Trans<br>Logistic
                     </h1>
                 </div>
+
+                <div class="intro__slider-arrows">
+                    <button class="intro__slider-btn  intro__slider-btn--prev" id="introSliderPrev" type="button">Prev</button>
+                    <button class="intro__slider-btn  intro__slider-btn--next" id="introSliderNext" type="button">Next</button>
+                </div>
             </div><!-- /.intro__inner -->
 
         </div><!-- /.container -->
@@ -81,7 +100,7 @@
 
 
     <!-- Services -->
-    <section class="section" id="services">
+    <section class="section" id="services" data-scrollspy="#services">
         <div class="container">
             <div class="services">
                 <h2 class="services__main-title">Services</h2>
@@ -131,7 +150,7 @@
 
 
     <!-- Clients -->
-    <section class="section  section--map" id="clients">
+    <section class="section  section--map" id="clients" data-scrollspy="#clients">
         <div class="container">
             <h2 class="section__title"><span>Our</span> clients</h2>
 
@@ -182,7 +201,7 @@
                 </div><!-- /.clients__logos -->
 
                 <div class="clients__reviews">
-                    <div class="reviews">
+                    <div class="reviews" id="reviewsSlider">
                         <div class="reviews__item">
                             <div class="reviews__header">
                                 <img class="reviews__photo" src="https://placehold.it/100" alt="">
@@ -196,11 +215,25 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laboriosam eius perspiciatis molestiae aut repellat delectus fugiat veritatis maxime impedit harum accusamus, quas nihil laudantium minima ex sapiente. Error, repudiandae.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <div class="reviews__item">
+                            <div class="reviews__header">
+                                <img class="reviews__photo" src="https://placehold.it/100" alt="">
+                                <div class="reviews__header-content">
+                                    <div class="reviews__name">John Smith</div>
+                                    <div class="reviews__company">FOX Hub CEO</div>
+                                </div>
+                            </div>
+                            <div class="reviews__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laboriosam eius perspiciatis molestiae aut repellat delectus fugiat veritatis maxime impedit harum accusamus, quas nihil laudantium minima ex sapiente. Error, repudiandae.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laboriosam eius perspiciatis molestiae aut repellat delectus fugiat veritatis maxime impedit harum accusamus, quas nihil laudantium minima ex sapiente. Error, repudiandae.</p>
+                            </div>
+                        </div>
+                    </div><!-- /.reviews -->
+                </div><!-- /.clients__reviews -->
             </div><!-- /.clients -->
 
-            <button class="btn  btn--orange  btn--shadow" type="button">
+            <button class="btn  btn--orange  btn--shadow" type="button" data-modal="#becomeClientModal">
                 <span>Become a client</span>
             </button>
             <span class="clients-love">we love our clients</span>
@@ -210,7 +243,7 @@
 
 
     <!-- Benefits -->
-    <section class="section" id="benefits">
+    <section class="section" id="benefits" data-scrollspy="#benefits">
         <div class="container">
             <h2 class="section__title"><span>Our</span> benefits</h2>
             <div class="benefits">
@@ -256,7 +289,7 @@
 
 
     <!-- Team -->
-    <section class="section  section--gray" id="team">
+    <section class="section  section--gray" id="team" data-scrollspy="#team">
         <div class="container">
             <h2 class="section__title"><span>Our</span> team</h2>
 
@@ -322,7 +355,7 @@
 
 
     <!-- Mission -->
-    <section class="section" id="mission">
+    <section class="section" id="mission" data-scrollspy="#mission">
         <div class="container">
             <h2 class="mission-title">Our mission</h2>
             <div class="mission">
@@ -341,7 +374,7 @@
 
 
     <!-- News -->
-    <section class="section  section--last" id="news">
+    <section class="section  section--last" id="news" data-scrollspy="#news">
         <div class="container">
             <h2 class="section__title"><span>Interesting</span> to read</h2>
 
@@ -368,7 +401,6 @@
             </a>
         </div><!-- /.container -->
     </section>
-
 
 
 
@@ -431,7 +463,7 @@
                     </address>
                 </div>
 
-                <button class="modal__close" type="button">
+                <button class="modal__close" type="button" data-modal-close>
                     <img src="assets/images/close.svg" alt="Close">
                 </button>
             </div><!-- /.modal__content -->
@@ -467,6 +499,7 @@
 
 <!-- Javascript -->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/app.js"></script>
 
 

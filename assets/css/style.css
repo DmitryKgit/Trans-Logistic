@@ -191,11 +191,6 @@ body.show-nav .header {
 .intro {
     margin-bottom: 30px;
     position: relative;
-<<<<<<< HEAD
-=======
-
-    background-color: #000;
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
 }
 
 .intro--blog {
@@ -215,19 +210,15 @@ body.show-nav .header {
     height: 100%;
     overflow: hidden;
 
-<<<<<<< HEAD
     background: #04222a url("../images/slider/slide-1.jpg") no-repeat center;
     background-size: cover;
 
-=======
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-<<<<<<< HEAD
 .intro__slider .slider-item {
     display: none;
 }
@@ -240,8 +231,6 @@ body.show-nav .header {
     display: block;
 }
 
-=======
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
 .intro__slider .slick-list,
 .intro__slider .slick-track {
     height: 100%;
@@ -274,11 +263,7 @@ body.show-nav .header {
     width: 0;
     height: 0;
     padding: 0;
-<<<<<<< HEAD
     margin: 0 3px;
-=======
-    margin: 0 5px;
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
 
     font-size: 0;
     color: transparent;
@@ -296,10 +281,7 @@ body.show-nav .header {
     border-width: 10px 10px 10px 0;
     border-color: transparent #fff transparent transparent;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
 .intro__slider-btn--next {
     border-style: solid;
     border-width: 10px 0 10px 10px;
@@ -1207,12 +1189,7 @@ body.show-nav .header {
     background-color: #fff;
     opacity: 0;
 
-<<<<<<< HEAD
     transform: scale(0.5);
-=======
-    transform:  scale(0.5);
-
->>>>>>> e40bd75353144d66e7fab3f20d95a18d9ce90fce
     transition: transform .2s ease-out, opacity .2s ease-out;
 }
 
